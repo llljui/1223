@@ -1,0 +1,203 @@
+</div>
+{if $MODULE_NAME != 'deals'&& $MODULE_NAME != 'transfer'}
+<!--<div class="blank20"></div>-->
+{/if}
+
+<div id="ftw">	
+	<div id="ft">
+        {if 0}
+        <!-- 弃用-->
+        <!-- start -->
+		{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+		
+		<div class="wrap">
+			{if $f_link_data}
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '合作伙伴'}	
+				    <div class="link partner">
+				    		<!---
+					<h3 {if $link_group.name eq '友情链接'}class="yqlj"{/if} {if $link_group.name eq '合作伙伴'}class="hzhb"{/if} >{$link_group.name}</h3>
+					-->
+					<!--<div class="blank10"></div>-->
+					<h3 style="font-size:15px;">{$link_group.name}</h3>
+					<div class="blank10"></div>
+					<ul {if $link_group.name eq '合作伙伴'}class="td"{/if}>
+					{foreach from=$link_group.links item=link}
+						<li><a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}" {if $link_group.name eq '合作伙伴'}	class="bor_hover"{/if}>{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a></li>
+					{/foreach}
+					</ul>
+					</div>	
+					<div class="blank10"></div>	
+					{/if}
+				{/foreach}
+				{/if}
+		</div>
+		{/if}
+        <!-- end -->
+		{/if}
+
+		<div class="ftbj">
+			{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+		<div class="wrap">
+			<!--<div class="blank10"></div>-->
+			{if $f_link_data}
+                <div class="link partner" id="ad_pa">
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '友情链接'}
+				    	<!--
+					<h3 {if $link_group.name eq '友情链接'}class="yqlj"{/if} {if $link_group.name eq '合作伙伴'}class="hzhb"{/if} >{$link_group.name}</h3>
+					-->
+                    <h5 class="f_l ad_h ad_cur"  id="ad_h1">{$link_group.name}</h5>
+					{/if}
+				{if $link_group.name eq '合作伙伴'}
+                    <h5 class="f_l ad_h" id="ad_h2">合作伙伴</h5>
+					{/if}
+				{/foreach}
+
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '友情链接'}
+                    <div class="slider2 s_first">
+                        {foreach from=$link_group.links item=link}
+                        <div class="slide"><img src="{$link.img}" onclick="window.location.href='{$link.url}'"></div>
+                        {/foreach}
+                    </div>
+                    {/if}
+				{if $link_group.name eq '合作伙伴'}
+                    <div class='slider2 s_two'>
+                        {foreach from=$link_group.links item=link}
+                        <div class="slide"><img src="{$link.img}" onclick="window.location.href='{$link.url}'"></div>
+                        {/foreach}
+                    </div>
+                    {/if}
+				{/foreach}
+					    <script type="text/javascript">
+					        $(document).ready(function(){
+					          $('.s_first').bxSlider({
+					            slideWidth:120, 
+								auto: true,
+					  			autoControls: true,
+					            minSlides: 4,
+					            maxSlides: 4,
+					            slideMargin:5
+					          });
+					           $('.s_two').bxSlider({
+					            slideWidth:120, 
+								auto: true,
+					  			autoControls: true,
+					            minSlides: 4,
+					            maxSlides: 4,
+					            slideMargin:5
+					          });
+					        });
+					    </script>
+					<!-- <ul {if $link_group.name eq '合作伙伴'}class="td"{/if}>
+					{foreach from=$link_group.links item=link}
+						<li style="height:60px;"><a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}">{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a></li>
+					{/foreach}
+					</ul> -->
+					</div>	
+                <div class="blank1"></div>	
+				{/if}
+				<div class="blank10"></div>
+				<div class="footer_line3"></div>
+		</div>
+		{/if}
+		{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+        		
+    	<div class="wrap ">
+    		<div class="blank20"></div>
+			<div style="padding-bottom:20px;">
+	            <ul class="cf f_l f_box" style="width:810px!important;">
+	            	{foreach from=$deal_help item=help_cate name="help_cate"}
+					{if $smarty.foreach.help_cate.iteration <= app_conf('HELP_CATE_LIMIT')}
+					<li style="border" class="col hp{$smarty.foreach.help_cate.iteration}{if $smarty.foreach.help_cate.last} end{/if}">
+	                    <h3 class="f_l">{$help_cate.title}</h3>
+						<div class="blank0"></div>
+	                    <ul class="sub-list">
+							{foreach from=$help_cate.help_list item=help_item name="help_item"}
+							{if $smarty.foreach.help_item.iteration <= app_conf('HELP_ITEM_LIMIT')}
+							<li><a href="{$help_item.url}" {if $help_item.new eq 1}target="_blank"{/if}>{$help_item.title}</a></li>
+							{/if}
+							{/foreach}  
+							<li class="blank0"></li>         
+						</ul>
+						<div class="blank0"></div>
+	                </li> 
+					{/if}
+					{/foreach}
+					<div style="border-left: 1px solid #dadada;height:205px;width:1px;float: left;margin-left: -30px;"></div>
+				    <div class="wei_code all_code"><img width="97%" style="margin: 2px 0 2px 0;" height="95%" src="app/Tpl/new/inc/images/wei_code.jpg"><h5 style="font-size:12px;text-align: center;margin-top:5px;">关注我们的微信</h5></div> 
+					<div class="xb_code all_code"><img width="100%" height="100%" src="http://www.xiaobinqipei.com/themes/68ecshopcom_360buy/images/android.jpg"><h5 style="font-size:12px;text-align:center;margin-top:5px;">手机客户端下载</h5></div>  
+					<li class="blank0"></li>  
+	            </ul>
+				<div class="f_r customer" style="border-left: 1px solid #dadada;width: 360px;height:208px; ">
+					<div class="telphone f_r">
+						<div class="f_r">
+							<span class="telep b">{function name="app_conf" v="SHOP_TEL"}</span>
+							<span class="time f12">{function name="app_conf" v="ONLINE_TIME"}</span>
+						</div>
+						<i class="iconfont f_r mt1" style="font-size:75px;line-height:50px;">&#xe61f;</i>
+					</div>
+					<div class="blank30"></div>
+					<div class="copy_right tr">
+							{function name="app_conf" value="SHOP_FOOTER"} 
+					<div class="blank1"></div>
+					{function name="app_conf" value="ICP_LICENSE"}&nbsp;&nbsp;
+					{function name="app_conf" value="COUNT_CODE"}
+					</div>
+				</div>
+
+				<div class="blank25"></div>
+
+				<div class="blank0"></div>
+			</div>
+			
+		</div>
+		{/if}
+				
+		</div>	
+	</div>
+	{if $online_qq}
+	{include file="inc/kefu.html"}
+	{/if}
+	<div id="gotop"></div>
+	{if $MODULE_NAME neq 'guide'}
+<script type="text/javascript" defer="defer">
+	resetWindowBox();
+     $("#ad_h1").click(function() {
+     $("#ad_h2").css("color","black");
+     $("#ad_h1").css("color","red");
+     $(".bx-wrapper:last").css("display","none");
+     $(".bx-wrapper:first").css("display","block");
+ });
+     $("#ad_h2").click(function() {
+   	 $("#ad_h1").css("color","black");
+     $("#ad_h2").css("color","red");
+     $(".bx-wrapper:first").css("display","none");
+     $(".bx-wrapper:last").css("display","block");
+  });
+</script>
+{/if}
+</div>
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('a.bx-prev').css("opacity","0.2");
+		$('a.bx-next').css("opacity","0.2");
+		$('.bx-wrapper:last').css("display","none");
+		$('.bx-wrapper').hover(function() {
+			$('a.bx-prev').css("opacity","1");
+			$('a.bx-next').css("opacity","1");
+		}, function() {
+			$('a.bx-prev').css("opacity","0.2");
+			$('a.bx-next').css("opacity","0.2");
+		});
+		/*$(".bx-clone").remove();*/
+/*	$(".s_first div:eq(1)").remove();
+	$(".s_first div:eq(0)").remove();
+	$(".s_two div:eq(1)").remove();
+	$(".s_two div:eq(0)").remove();*/
+	})
+</script>
+</html>

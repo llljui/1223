@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Site" content="content Site">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<title>小滨金融</title>
+	<link rel="stylesheet" href="app/Tpl/new/share/css/index.css">
+	<link rel="stylesheet" type="text/css" href="app/Tpl/new/share/js/node_modules/_social-share.js@1.0.16@social-share.js/dist/css/share.min.css">
+	<link rel="stylesheet" type="text/css" href="app/Tpl/new/share/css/zeroModal.css">
+</head>
+<body>
+<div class="h_1_1"></div>
+<div class="h_1_2"></div>
+<div class="h_1"></div>
+<div class="h_1_3"></div>
+<div class="h_1_4"></div>
+<div class="h_1_5"></div>
+<div class="h_1_6"></div>
+<div class="h_2_1"></div>
+<div class="h_2_2"></div>
+<div class="h_2"></div>
+<div class="h_3"></div>
+<div class="h_4"></div>
+<div class="h_5"></div>
+<div class="h_6"></div>
+<img src="app/Tpl/new/share/img/back.png" class="goback" width="5%" onclick="window.location.href='http://jr.xiaobinqipei.com'">
+<div class="page1">
+	<img src="app/Tpl/new/share/img/money.png" class="money">
+	<img src="app/Tpl/new/share/img/1.png" alt="暂无图片" class="p1">
+	<img src="app/Tpl/new/share/img/share1.gif" alt="暂无图片" width="100%">
+</div>
+<div class="page2">	
+	<a href="#jump" style=" border-radius: 8px;position: absolute;display: block;width: 192px;height: 35px;margin-left: 505px;margin-top:282px;"></a>
+	<img src="app/Tpl/new/share/img/share2.png" width="100%" alt="暂无图片">
+</div>
+<div class="page3">
+	<img src="app/Tpl/new/share/img/share3.png" alt="暂无图片" width="100%">
+	<h5 class="explem">例如:好友投资6月10万,您的佣金=100000*0.2%÷12*6=100元</h5>
+	<h5 class="myget">我的佣金:100元</h5>
+	<div class="cpu">
+	  <span class="fr_m">好友投资金额  </span><input style="display: inline-block;" type="text" placeholder="100000" class="cpu_input1" width="70%" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+	  <br>
+	  <span class="fr_t">投资期限(月)  </span><input style="display: inline-block;" type="text" placeholder="6" class="cpu_input2" width="70%" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+		<img src="app/Tpl/new/share/img/5.png" alt="暂无图片" class="p3_3" onclick="cpu()">
+	</div>	
+</div>
+<div class="page4" id="jump">
+	<img src="app/Tpl/new/share/img/share4.png" width="100%" alt="暂无图片">
+	<div class="share">
+	    	<div id="share-1" data-sites="wechat" onmouseover="weixin_h()" onclick="weixin_c()"></div>
+	    	<!-- <img src="img/6.png" alt="暂无图片" class="share_img" id="#share-1"> -->	
+			<div id="share-2" data-sites="qq" ></div>
+			<div id="share-3" data-sites="weibo" ></div>
+			<div id="share-4" data-sites="qzone" ></div>
+		<!-- <img src="img/8.png" alt="暂无图片" class="share_img">
+		<img src="img/9.png" alt="暂无图片" class="share_img"> -->
+	</div>
+</div>
+<div class="page5">
+	<img src="app/Tpl/new/share/img/share5_2.png" width="960px" alt="暂无图片" class="p5_5">
+</div>
+<script type="text/javascript">
+        var is_login = parseInt('{$is_login}');
+        var is_identify = parseInt('{$is_identify}');
+        var no_login_error = "请先去登录吧";
+        var no_identify_error = "请先去注册吧";
+        var code = '{$code}';
+
+        //设置数据
+        var data_obj = {
+            login_url : location.origin + '/index.php?ctl=user&act=register&r='+code,
+            title : "小滨金融注册",
+            description: "这是最好的一次分享",
+            image : location.origin+"app/Tpl/new/share/img/share3.png",
+        }
+
+        function show_layer()
+        {
+            if (!is_login) {
+            	 	 _drag1();
+                    /*alert(no_login_error);*/           
+            } else {
+                if (!is_identify) {
+                	 _drag2();
+                    /*alert(no_identify_error);*/           
+                }
+            }
+        }
+</script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="app/Tpl/new/share/js/zeroModal.js"></script>
+<script type="text/javascript" src="app/Tpl/new/share/js/index.js"></script>
+<script type="text/javascript" src="app/Tpl/new/share/js/jquery.share.min.js"></script>
+<script type="text/javascript" src="app/Tpl/new/share/js/mustache.js"></script>
+<script type="text/javascript">
+function weixin_h() {
+$(".wechat-qrcode").css("display","none");
+ console.log(22);   
+}
+function weixin_c() {
+     if (!is_login) {
+                     _drag1();
+                    /*alert(no_login_error);*/           
+            } 
+     else {
+                if (!is_identify) {
+                     _drag2();
+                    /*alert(no_identify_error);*/           
+                }
+                else {
+                      $(".wechat-qrcode").css("display","block");
+                }
+            }
+}
+$("#share-1").share(); 
+$("#share-2").share();
+$('#share-3').share();
+$('#share-4').share();
+    function _drag1() {
+        zeroModal.show({
+            title: '<h4 style="text-align:center;">对不起您还不是小滨金融用户</h4>',
+             content: '<a href="'+ location.origin + '/index.php?ctl=user&act=register&r='+'{$code}'+'" ><h5 style="text-align:center;">立即点击注册</h5></a>',
+            dragHandle: 'container',
+            width: '210px', 
+       	    height: '150px', 
+            ok: true
+        });
+    }
+    function _drag2() {
+        zeroModal.show({
+            title: '<h4 style="text-align:center;">对不起您还未实名认证</h4>',
+            content: '<a href="'+ location.origin + '/member.php?ctl=uc_account&act=security'+'" ><h5 style="text-align:center;color:black;">点击认证</h5></a>',
+            dragHandle: 'container',
+            width: '210px', 
+       	    height: '150px', 
+            ok: true
+        });
+    }
+</script>
+</body>
+</html>

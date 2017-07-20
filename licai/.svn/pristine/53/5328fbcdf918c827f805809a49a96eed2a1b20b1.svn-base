@@ -1,0 +1,91 @@
+<div class="tabbox clearfix">
+	<div class="tab cur"><a href="{url x="index" r="uc_invite"}">我要推荐</a></div>
+	<div class="tab" ><a href="{url x="index" r="uc_invite#invite"}">有效推荐</a></div>
+	<div class="tab"><a href="{url x="index" r="uc_invite#invite" p="type=1"}">无效推荐</a></div>
+	<div class="tab"><a href="{url x="index" r="uc_invite#reward"}">奖励记录</a></div>
+</div>
+<div class="uc_box bdd bt0">
+	<div class="referer_box">
+		<div class="item referer_number">
+			<span>推荐好友总数</span>
+			{$referral_user}
+		</div>
+		<div class="item referer_money">
+			<span>已支付推荐奖励</span>
+			{function name="format_price" v=$total_referral_money}
+		</div>
+	</div>	
+	<div class="blank"></div>
+	<div class="uc-table">
+		<div id="referrals" class="pl30">
+				<div class="im refers">
+					{if $user_info.mobile}
+						<h4>手机号码推荐：</h4>
+						<textarea type="text"  onclick="this.select()" class="f-text f_l ui-textarea mr5" id="share-copy-text-0" style="width:500px; height:60px">我朋友推荐我一个非常不错的理财方式，年化13%，多重安全保障！我试过了，很快就能回款，挺安全的，你也试试吧！{$share_url_mobile}</textarea>
+						<input type="button" class="formbutton f_l" id="share-copy-button-0" value="{$LANG.COPY}内容">
+						<div class="blank"></div>
+					{/if}
+						<h4>用户名推荐 ：</h4>
+						<textarea type="text"  onclick="this.select()" class="f-input f_l ui-textarea mr5" id="share-copy-text-1" style="width:500px; height:60px">我朋友推荐我一个非常不错的理财方式，年化13%，多重安全保障！我试过了，很快就能回款，挺安全的，你也试试吧！{$share_url_username}</textarea>
+						<input type="button" class="formbutton f_l" id="share-copy-button-1" value="{$LANG.COPY}内容">
+				
+				</div>
+		</div>
+		<div class="blank"></div>
+		<div class="pt10 pb10 pr15 pl15">
+			<div class="bddf p10">
+				<h4>奖励规则</h4>
+				<div class="p10">
+                    <p>1､用户将自己的专属链接发于好友，好友点击邀请链接注册会员并成功投资100元以上，用户即可获得10元现金奖励。</p>
+                    <p>2､10元现金奖励，用户可以登录平台“个人账户—资金管理—资金日志”中进行查询。</p>
+                    <p>3､好友若在推荐30天内成功参与项目投资，用户即可获得好友当次投资金额的2‰现金奖励；</p>
+                    <p>4､2‰现金奖励，用户可登陆平台“个人账户—推荐奖励—奖励记录”中进行查询。</p>
+				</div>
+				<h4>温馨提示</h4>
+				<div class="p10">
+                    <p>1､在活动时间内，系统会判断用户推荐的好友是否有效，若有效系统会自动发放10元现金和2‰返现发放到个人账户的可用余额里。</p>
+                    <p>2､活动最终解释权归杭州啃金投资有限公司所有，公司有保留随时修改、暂停、终止本公司优惠活动以及任何相关规则条款及其解释权，如有疑问请致电客服热线：400-003-6006。</p>
+				</div>
+		  </div>
+		</div>
+		<div class="blank"></div>
+	</div><!--end uc-table-->
+</div>
+<script type="text/javascript" src="{$TMPL}/js/utils/ZeroClipboard.js"></script>
+<script type="text/javascript">
+	var client = new ZeroClipboard( $('#share-copy-button-0') );
+
+	  client.on( 'load', function(client) {
+	  
+	    client.on( 'datarequested', function(client) {
+	      client.setText($('#share-copy-text-0').val());
+	    } );
+	
+	    client.on( 'complete', function(client, args) {
+	      alert(LANG.JS_COPY_SUCCESS);
+	    } );
+	  });
+	  
+	  client.on( 'wrongflash noflash', function() {
+	  		ZeroClipboard.destroy();
+	  });
+	
+	var client1 = new ZeroClipboard( $('#share-copy-button-1') );
+
+	  client1.on( 'load', function(client1) {
+	  
+	    client1.on( 'datarequested', function(client1) {
+	      client.setText($('#share-copy-text-1').val());
+	    });
+	
+	    client1.on( 'complete', function(client1, args) {
+	      alert(LANG.JS_COPY_SUCCESS);
+	    });
+	  });
+	
+	  client1.on( 'wrongflash noflash', function() {
+	    ZeroClipboard.destroy();
+	  });
+		
+	
+</script>

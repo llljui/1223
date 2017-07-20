@@ -1,0 +1,190 @@
+</div>
+{if $MODULE_NAME != 'deals'&& $MODULE_NAME != 'transfer'}
+<!--<div class="blank20"></div>-->
+{/if}
+
+<div id="ftw">	
+	<div id="ft">
+		{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+		
+		<div class="wrap">
+			{if $f_link_data}
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '合作伙伴'}	
+				    	<div class="link partner">
+				    		<!---
+					<h3 {if $link_group.name eq '友情链接'}class="yqlj"{/if} {if $link_group.name eq '合作伙伴'}class="hzhb"{/if} >{$link_group.name}</h3>
+					-->
+					<!--<div class="blank10"></div>-->
+					<h3 style="font-size:15px;">{$link_group.name}</h3>
+					<div class="blank10"></div>
+					<ul {if $link_group.name eq '合作伙伴'}class="td"{/if}>
+					{foreach from=$link_group.links item=link}
+						<li><a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}" {if $link_group.name eq '合作伙伴'}	class="bor_hover"{/if}>{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a></li>
+					{/foreach}
+					</ul>
+					</div>	
+					<div class="blank10"></div>	
+					{/if}
+				{/foreach}
+				{/if}
+		</div>
+		{/if}
+		<div class="ftbj">
+			{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+		<div class="wrap">
+			<!--<div class="blank10"></div>-->
+			{if $f_link_data}
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '友情链接'}
+				    <div class="link partner">
+				    	<!--
+					<h3 {if $link_group.name eq '友情链接'}class="yqlj"{/if} {if $link_group.name eq '合作伙伴'}class="hzhb"{/if} >{$link_group.name}</h3>
+					-->
+					<h3 class="f_l" style="margin-left:15px;">{$link_group.name}：</h3>
+			      		
+<!-- 			      	<section id="content">
+					<div id="lista1" class="als-container">
+						<span class="als-prev"><img  style="width:15px;height:22px;" src="app/Tpl/new/inc/lunbo/images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+						<div class="als-viewport">
+							<ul class="als-wrapper">
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li><li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+								<li class="als-item"><img width="100%" height="100%" src="app/Tpl/new/inc/lunbo/images/als-images/card.png" alt="calculator" title="calculator" />calculator</li>
+							</ul>
+						</div>
+						<span class="als-next" ><img style="width:15px;height:22px;" src="app/Tpl/new/inc/lunbo/images/thin_right_arrow_333.png" alt="next" title="next" /></span>
+					</div>
+					</section>
+					<script type="text/javascript" src=""></script>
+					<script type="text/javascript" src="app/Tpl/new/inc/lunbo/js/jquery.als-1.7.min.js"></script>
+					<script type="text/javascript">
+						$(document).ready(function() 
+						{
+							$("#lista1").als({
+								visible_items: 4,
+								scrolling_items: 2,
+								orientation: "horizontal",
+								circular: "yes",
+								autoscroll: "no",
+								interval: 5000,
+								speed: 500,
+								easing: "linear",
+								direction: "right",
+								start_from: 0
+							});
+							
+							$("#lista2").als({
+								visible_items: 2,
+								scrolling_items: 1,
+								orientation: "vertical",
+								circular: "yes",
+								autoscroll: "no",
+								start_from: 1
+							});
+							$("#demo3").als({
+								visible_items: 4,
+								scrolling_items: 2,
+								orientation: "horizontal",
+								circular: "yes",
+								autoscroll: "yes",
+								interval: 4000
+							});
+							$("#demo4").als({
+								visible_items: 4,
+								scrolling_items: 2,
+								orientation: "horizontal",
+								circular: "yes",
+								autoscroll: "no",
+								start_from: 2
+							});
+						});
+					</script> -->
+
+					<!-- <ul {if $link_group.name eq '合作伙伴'}class="td"{/if}>
+					{foreach from=$link_group.links item=link}
+						<li style="height:60px;"><a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}">{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a></li>
+					{/foreach}
+					</ul> -->
+					</div>	
+					<div class="blank1"></div>	
+					{/if}
+				{/foreach}
+				{/if}
+				<div class="blank10"></div>
+				<div class="footer_line3"></div>
+		</div>
+		{/if}
+		{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+        		
+    	<div class="wrap ">
+    		<div class="blank20"></div>
+			<div style="padding-bottom:20px;">
+	            <ul class="cf f_l f_box">
+	            	{foreach from=$deal_help item=help_cate name="help_cate"}
+					{if $smarty.foreach.help_cate.iteration <= app_conf('HELP_CATE_LIMIT')}
+					<li style="border" class="col hp{$smarty.foreach.help_cate.iteration}{if $smarty.foreach.help_cate.last} end{/if}">
+	                    <h3 class="f_l">{$help_cate.title}</h3>
+						<div class="blank0"></div>
+	                    <ul class="sub-list">
+							{foreach from=$help_cate.help_list item=help_item name="help_item"}
+							{if $smarty.foreach.help_item.iteration <= app_conf('HELP_ITEM_LIMIT')}
+							<li><a href="{$help_item.url}" {if $help_item.new eq 1}target="_blank"{/if}>{$help_item.title}</a></li>
+							{/if}
+							{/foreach}  
+							<li class="blank0"></li>         
+						</ul>
+						<div class="blank0"></div>
+	                </li> 
+					{/if}
+					{/foreach}
+					<div style="border-left: 1px solid #dadada;height:205px;width:1px;float: left;margin-left: -40px;"></div>
+				    <div class="wei_code all_code"><img width="100%" height="100%" src="app/Tpl/new/inc/images/wei_code.jpg"><h5 style="font-size:12px;text-align: center;margin-top:5px;">关注我们的微信</h5></div> 
+					<div class="xb_code all_code"><img width="100%" height="100%" src="app/Tpl/new/inc/images/wei_code.jpg"><h5 style="font-size:12px;text-align:center;margin-top:5px;">手机客户端下载</h5></div>  
+					<li class="blank0"></li>  
+	            </ul>
+				<div class="f_r customer" style="border-left: 1px solid #dadada;width: 410px;height:208px; ">
+					
+					<div class="telphone f_r">
+						<div class="f_r">
+							<span class="telep b">{function name="app_conf" v="SHOP_TEL"}</span>
+							<span class="time f12">{function name="app_conf" v="ONLINE_TIME"}</span>
+						</div>
+						<i class="iconfont f_r mt1" style="font-size:75px;line-height:50px;">&#xe61f;</i>
+					</div>
+					<div class="blank30"></div>
+					<div class="copy_right tr">
+							{function name="app_conf" value="SHOP_FOOTER"} 
+					<div class="blank1"></div>
+					{function name="app_conf" value="ICP_LICENSE"}&nbsp;&nbsp;
+					{function name="app_conf" value="COUNT_CODE"}
+					</div>
+				</div>
+
+				<div class="blank25"></div>
+
+				<div class="blank0"></div>
+			</div>
+			
+		</div>
+		{/if}
+				
+		</div>	
+	</div>
+	{if $online_qq}
+	{include file="inc/kefu.html"}
+	{/if}
+	<div id="gotop"></div>
+	{if $MODULE_NAME neq 'guide'}
+<script type="text/javascript" defer="defer">
+	resetWindowBox();
+</script>
+{/if}
+</div>
+
+</body>
+</html>

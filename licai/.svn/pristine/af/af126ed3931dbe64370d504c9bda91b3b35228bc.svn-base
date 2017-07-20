@@ -1,0 +1,27 @@
+*{margin:0;overflow-x: hidden;list-style: none;}
+body{-webkit-perspective: 300px;perspective: 300px;}
+.page1{width:1360px;margin:0 auto;}
+.car_y{position: absolute;margin-top:-850px;margin-left: 100px;}
+.car_g{position: absolute;margin-top:315px;margin-left: 660px;}
+.act_time,.boat,.handle,.m_580{position: absolute;}
+.boat{margin-top:-750px;margin-left:700px;-webkit-transform:scale(0.2, 0.2);transform:scale(0.2, 0.2);opacity: 0;}
+.handle{margin-top:-1250px;margin-left:475px;opacity: 0;-webkit-transform: translate3d(200px, 0, 200px);transform: translate3d(200px, 0, 200px)}
+.m_580{margin-top:-515px;margin-left:0px;}
+.act_time{margin-top:-450px;margin-left:750px;opacity: 0;}
+.page2{clear: both;margin: 0 auto; margin-top:-10px;width: 1360px;}
+.ecv{position: absolute;margin-top:100px;}
+.page3,.page4,.page5,.page6,.page7,.page8{margin:0 auto;width: 1360px;margin-top: -18px}
+.page4{margin-top: -11px;}
+.bao{position: absolute;margin-top: -130px;margin-left: 245px;cursor: pointer;}
+.bao1{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+.bao2{margin-top: -70px;margin-left: 870px;}
+.bao3{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);margin-top: -160px;margin-left: 395px;}
+.bao4{margin-top: -265px;margin-left: 945px;}
+.bao5{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);margin-left: 200px;margin-top: -160px;}
+.bao6{margin-top: -443px;margin-left: 910px;}
+.h_1{height:650px;width: 100%;background:#a3f2fe;z-index: -6;position: absolute;}
+.h_1_1{position: absolute;width: 50%;height: 115px;background:/* url('../img/h_1_1.png') */#a3f2fe;margin-top:650px;z-index:-1;background-position:100% 100%;}
+.h_1_2{position: absolute;right: 0;width: 50%;height: 120px;background:/* url('../img/h_1_1.png') */#a3f2fe;margin-top:642px;z-index:-1;background-position:100% 100%;}
+.h_1_3{position: absolute;width: 50%;height: 115px;background:/* url('../img/h_1_1.png') */#ffc41e;margin-top:734px;z-index:-1;background-position:100% 100%;}
+.h_1_4{position: absolute;width: 50%;height: 115px;background:/* url('../img/h_1_1.png') */#ffc41e;margin-top:758px;z-index:-1;background-position:100% 100%;right: 0;}
+.h_2_1{position: absolute;width: 100%;height: 2870px;background:#fdeb83;margin-top:849px;z-index:-1;}

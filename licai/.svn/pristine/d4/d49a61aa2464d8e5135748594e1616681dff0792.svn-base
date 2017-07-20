@@ -1,0 +1,420 @@
+{include file="inc/header2.html"} 
+					<!-- 	<div class="short f_l" >
+						{include file="inc/relate_help_article.html"}
+					</div> -->
+
+<script type="text/javascript">
+	var $_path="";
+	var $_frontPath="";
+</script>
+<!-- jquery -->
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/jquery.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/jquery.slide.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/WdatePicker.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/tab.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/common.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/raphael.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/BaseInfo.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/page.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/global-1.1.0.min.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/content.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/move2.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/jquery.SuperSlide.2.1.js"></script>
+	<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/common.js"></script>
+    <script type="text/javascript" src="./app/Tpl/new/inc/ysroll/cebianlan.js"></script>
+    <script type="text/javascript" src="./app/Tpl/new/inc/ysroll/Jane-js.js"></script>
+    <script type="text/javascript" src="./app/Tpl/new/inc/ysroll/ZeroClipboard.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/jquery.alert.js"></script>
+<link rel="stylesheet" href="./app/Tpl/new/inc/ysroll/default.css" />
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/WdatePicker.css">
+<link rel="stylesheet" href="./app/Tpl/new/inc/ysroll/prettify.css" />
+<script charset="utf-8" src="./app/Tpl/new/inc/ysroll/kindeditor-min.js"></script>
+<script charset="utf-8" src="./app/Tpl/new/inc/ysroll/zh_CN.js"></script>
+<script charset="utf-8" src="./app/Tpl/new/inc/ysroll/city.js"></script>
+<!-- My97DatePicker -->
+
+<!-- 加密 -->
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/desencrypt.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/tripledes.js"></script>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/mode-ecb.js"></script>
+<!-- 验证 -->
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/validate.css" />
+<script src="./app/Tpl/new/inc/ysroll/jquery.validate.js" type="text/javascript"></script>
+<script src="./app/Tpl/new/inc/ysroll/jquery.validate.message_cn.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/jquery.alert.css"/>
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/basic.css"/>
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/Jane-css.css"/>
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/new.css"/>
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/style.css"/>
+<link rel="stylesheet" type="text/css" href="./app/Tpl/new/inc/ysroll/xj-cc.css">
+<link rel="shortcut icon" href=" /favicon.ico" /> 
+<style type="text/css">
+@media screen and (min-width: 1440px) {#fullpage{width:1920px;} .wrap{width:1376px;transition:none!important;} #J_APP_DOWN{margin-left: 167px;font-size:12px} .logo{margin-left: 163px!important;} .f_r{margin-right: -11px;}}
+@media screen and (max-width: 1441px) {#fullpage{width:1920px;} .wrap{width:1376px;transition:none!important;}.f_r{margin-right: -11px;}} 
+@media screen and (max-width: 1367px) {#fullpage{width:1367px;} .wrap{width:1205px;transition:none!important;}}
+@media screen and (max-width: 1280px) {#fullpage{width:1280px;}}
+@media screen and (max-width: 1025px) {#fullpage{width:1280px;}}
+@media screen and (max-width: 769px) {#fullpage{width:1280px;}}
+</style>
+<script type="text/javascript" src="./app/Tpl/new/inc/ysroll/jquery-fullpage.js"></script>
+    <script type="text/javascript" src="./app/Tpl/new/inc/ysroll/page-js.js"></script>
+    <script type="text/javascript" src="./app/Tpl/new/inc/ysroll/Jane-js.js"></script>
+	   <div id="xj_right" style="position:fixed;top:300px;left: 0;z-index: 10;">
+	   	<ul></ul>
+	   </div>
+	<div class="blank" style="height: 0px;"></div>
+
+    <div id="fullpage" class="page fullpage-wrapper"  style="margin: 0 auto;">
+       
+		<!-- 第一屏 -->
+		<div class="section page1">
+            <div class="new_head">
+    	  	<!-- 公用头部 -->
+		
+
+<!-- 公用头部 -->
+		<div class="header" style="height: 0px;margin-top: 5px;">
+
+		</div><!-- header -->
+
+
+<!-- nav -->
+		<!-- 公用头部 -->
+		
+<div class="clear"></div>
+<script type="text/javascript">
+	function changeTopHover(obj){   
+		$(".nav-con ul").find("li").removeClass("current");
+		$("#li"+obj).addClass("current");	
+	}
+	function xj_clickit (e) {
+		$('#fp-nav ul li').click(function () {
+			console.log($(this).index());
+			$('#fp-nav ul li').css('background-color','#39A1EA');
+			$(this).css('background-color','#C69F53');
+			})
+
+/*css("background-color","white");*/
+	} 
+	/*xj_clickit();*/
+
+</script>
+
+		<!-- 公用头部 -->
+    </div>
+			<div class="con">
+            
+				<div class="con1" style="margin-top: -310px!important;">
+					<div class="txt" style="margin-top:70px; ">
+					   <h4>什么是小滨金融</h4>
+					   <p>小滨金融，以全球领先的风险控制管理模式及大数据挖掘分析等专业技术，建立了完善的储备金制度、严格的风控措施、系统的财务统筹的银行托管，为广大投融资客户尤其是中小微企业主提供了一个理财融资相结合的一体化服务平台，帮助他们实现资产稳健增值和个人财务自由。</p>
+					   <a href="/index.php?ctl=user&act=register" class="ren_btn">立即注册</a>
+				    </div>
+				    <div class="pic draw">
+				    	<img src="./app/Tpl/new/inc/ysroll/page1_1.png" style="margin-top:40px;">
+				    	<div class="circle1"><img src="./app/Tpl/new/inc/ysroll/page1_2.png" alt="" style="margin-top:40px; ></div>
+				    	<div class="circle2"><img src="./app/Tpl/new/inc/ysroll/page1_3.png" alt=""></div>
+				    	<div class="circle3"><img src="./app/Tpl/new/inc/ysroll/page1_4.png" alt=""></div>
+				    </div>
+				</div>
+				
+			</div>
+			
+		</div><!-- section -->
+		
+		<!-- 第二屏 -->
+		<div class="section page2">
+			<div class="con">
+				<div class="con1" style="margin-top: -310px!important;">
+				    <div class="title" >
+				    	<h3>为什么选择小滨金融</h3>
+				    	<p>三层风控•7道安全防线 全力实现本息投资安全！</p>
+				    </div>
+					
+					<ul style="margin-top: 15px;">
+						<li>
+							<img src="./app/Tpl/new/inc/ysroll/page2_1.png" >
+							<div class="txt">
+								<h5>更安全</h5>
+								<p style="text-align:center;">建立风险保障体系,有效保障投资人的交易资金安全</p>
+							</div>
+						</li>
+						<li>
+							<img src="./app/Tpl/new/inc/ysroll/page2_2.png" >
+							<div class="txt">
+								<h5>低门槛</h5>
+								<p style="text-align:center;">大众门槛,1元起步，零花钱即可投资被誉为"屌丝们的理财神器"</p>
+							</div>
+						</li>
+						<li>
+							<img src="./app/Tpl/new/inc/ysroll/page2_3.png" >
+							<div class="txt">
+								<h5>高收益</h5>
+								<p style="text-align:center;">绝佳收益,40倍银行存款利息,4倍余额宝收益,7%-13%高收益</p>
+							</div>
+						</li>
+						<li>
+							<img src="./app/Tpl/new/inc/ysroll/page2_4.png" >
+							<div class="txt">
+								<h5>易流通</h5>
+								<p style="text-align:center;">快速赎回,突然想用钱收回投资自主定价挂牌转让流动性极强</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- section -->
+		
+		<!-- 第三屏 -->
+		<div class="section page3">
+			<div class="con">
+				<div class="con1" style="margin-top: -310px!important;">
+				    <div class="title">
+				    	<h3>小滨金融安全保障</h3>
+				    	<p>六大保障措施，项目多重筛选，让您无忧理财</p>
+				    </div>
+					<div class="txt">
+						<ul class="one1" style="margin-top: -35px;">
+							<li style="height: 115px;">
+								<h4>本息保障计划</h4>
+								<p>小滨金融理财所投项目均来自有'充分还款保证'的借贷项目</p>
+							</li>
+							<li style="height: 115px;">
+								<h4>债权组合分散风险</h4>
+								<p>采用'智能分散投资'思路，选取通过严格风控审核的上万份债权，经过后台模型的智能计算，生成债权包组合，通过分散投资来规避部分坏账风险。</p>
+							</li>
+							<li style="height: 115px;">
+								<h4>严格的风控体系</h4>
+								<p>依托融腾在资本金融界的强大实力，小滨金融理财采用国内外先进的科学信用审核与风险控制体系，推出高效先进的信用审核及风控体系。</p>
+							</li>
+						</ul>
+						<ul class="txt_r" style="margin-top: -35px;">
+							<li style="height: 115px;">
+								<h4>风险备用金</h4>
+								<p>保障平台的投资者资金安全,小滨金融设立了风险准备金机制.若投资人出借资金出现逾期，风险准备金将启动,对投资人进行全额本息垫付,"风险准备金账户"目前已由小滨金融的股东注资200万，后期根据成交额的增长做相应的调整。 </p>
+							</li>
+							<li style="height: 115px;">
+								<h4>第三方公司保障</h4>
+								<p>第三方公司提供连带责任担保</p>
+							</li>
+							<li style="height: 115px;">
+								<h4>平台安全获国际认证</h4>
+								<p>小滨金融平台已通过国际知名机构安全认证(CSA STAR、ISO/IEC 27001)信息安全等级保护，您可以完全放心。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!-- section -->
+		
+		<!-- 第四屏 -->
+		<div class="section page4">
+			<div class="con">
+				<div class="con1" style="margin-top: -310px!important;">
+				    <div class="title">
+				    	<h3>小滨金融平台产品</h3>
+				    	<p>低门槛、高收益、投资灵活，理财无忧</p>
+				    </div>
+					<ul class="txt">
+					    <div class="pic1"><img src="./app/Tpl/new/inc/ysroll/page4_1.png" ></div>
+					    <div class="pic2"><img src="./app/Tpl/new/inc/ysroll/page4_2.png" ></div>
+					    <div class="pic3"><img src="./app/Tpl/new/inc/ysroll/page4_3.png" ></div>
+						<li style="height: 290px!important;margin-left:-1px">
+							<img src="./app/Tpl/new/inc/ysroll/page4_5.png" >
+							<h5>债权转让</h5>
+							<p>已投资小滨金融优质项目的投资人,在项目尚未到期并且急需资金,可以通过将已有债权全部或者部分转让，来达到资金回笼的目,转让方可根据需要定价处。</p>
+						</li>
+						<li style="height: 290px!important;">
+							<img src="./app/Tpl/new/inc/ysroll/page4_6.png" >
+							<h5>有用分期</h5>
+							<p>致力于打造个人消费金融平台，在高频低额的个人消费金融领域，以小额分散，严谨的数据风控，打造年轻人享受金融服务的第一站，为年轻人提供“零压力”的轻松购物环境。</p>
+						</li>
+						<li style="margin-right:0;height: 290px!important;">
+							<img src="./app/Tpl/new/inc/ysroll/page4_7.png" >
+							<h5>帮付宝</h5>
+							<p>针对汽配经销商、采购商以及有资金需求的企业群体，所推出的中短期消费赊账理财产品。通过该项服务，用户在小滨汽配平台购物时可以先赊账，信用额度在1000元-50万元不等。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- section -->
+		
+		<!-- 第五屏 -->
+		<div class="section page5">
+			<div class="con">
+				<div class="con1" style="margin-top: -310px!important;">
+				    <div class="title">
+				    	<h3 style="margin-top:10px;">如何投资</h3>
+				    </div>
+					<div class="pic" style="margin-top: 5px!important;">
+						<div class="pic1"><a class="yel" href="javascript:void(0);" >注册</a><a href="javascript:void(0);">实名认证</a><a href="javascript:void(0);">充值</a><a href="javascript:void(0);">投资</a><a  href="javascript:void(0);" style="margin-right:0;">获得收益</a></div>
+						<div class="pic2" style="padding-top: 38px;">
+							<img src="./app/Tpl/new/inc/ysroll/page5_2.png" style="display:block;" width="570px" height="332px">
+							<img src="./app/Tpl/new/inc/ysroll/pageNew5_2.png" width="570px" height="332px" style="margin:-40px 44px!important;">
+							<img src="./app/Tpl/new/inc/ysroll/pageNew5_3.png" width="570px" height="332px" style="margin:-40px 44px!important;">
+							<img src="./app/Tpl/new/inc/ysroll/pageNew5_4.png" width="570px" height="332px" style="margin:-40px 44px!important;">
+							<img src="./app/Tpl/new/inc/ysroll/pageNew5_5.png" width="570px" height="332px" style="margin:-40px 44px!important;">
+							<!-- 此处是5张不同的图 -->
+						</div>
+						<div class="could1"><img src="./app/Tpl/new/inc/ysroll/page5_4.png" ></div>
+					    <div class="could2"><img src="./app/Tpl/new/inc/ysroll/page5_3.png" ></div>
+					    <div class="could3"><img src="./app/Tpl/new/inc/ysroll/page5_5.png" ></div>
+					</div>
+				</div>
+			</div>
+		</div><!-- section -->
+		<!-- 第六屏 -->
+		<div class="section page6">
+			<div class="con">
+				<div class="con1" style="margin-top: -310px!important;">
+				    <div class="title">
+				    	<h3>新手有礼！注册认证+投资+邀请好友
+				    	<br/><i> 惊喜不断</i></h3>
+				    </div>
+					<a href="/index.php?ctl=user&act=register" class="get_btn">我要注册</a>
+				</div>
+			</div>
+		</div><!-- section -->	  
+	</div><!-- fullpage -->
+    <div class="big_arr"><img src="./app/Tpl/new/inc/ysroll/page_btn.png" height="69" width="31" alt=""></div>
+
+	<script type="text/javascript">
+$(function() {
+	
+	changeTopHover(3);
+})
+</script>
+     <!-----------------------------------------------------------------------footer-->
+     </div>
+{if $MODULE_NAME != 'deals'&& $MODULE_NAME != 'transfer'}
+<!--<div class="blank20"></div>-->
+{/if}
+
+<div id="ftw">	
+	<div id="ft">
+		{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+		
+		<div class="wrap">
+			{if $f_link_data}
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '合作伙伴'}	
+				    	<div class="link partner">
+				    		<!---
+					<h3 {if $link_group.name eq '友情链接'}class="yqlj"{/if} {if $link_group.name eq '合作伙伴'}class="hzhb"{/if} >{$link_group.name}</h3>
+					-->
+					<!--<div class="blank10"></div>-->
+					<h3 style="font-size:15px;">{$link_group.name}</h3>
+					<div class="blank10"></div>
+					<ul {if $link_group.name eq '合作伙伴'}class="td"{/if}>
+					{foreach from=$link_group.links item=link}
+						<li><a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}" {if $link_group.name eq '合作伙伴'}	class="bor_hover"{/if}>{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a></li>
+					{/foreach}
+					</ul>
+					</div>	
+					<div class="blank10"></div>	
+					{/if}
+				{/foreach}
+				{/if}
+		</div>
+		{/if}
+		<div class="ftbj">
+			{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+		<div class="wrap">
+			<!--<div class="blank10"></div>-->
+			{if $f_link_data}
+				{foreach from=$f_link_data item=link_group}	
+				{if $link_group.name eq '友情链接'}
+				    <div class="link partner">
+				    	<!--
+					<h3 {if $link_group.name eq '友情链接'}class="yqlj"{/if} {if $link_group.name eq '合作伙伴'}class="hzhb"{/if} >{$link_group.name}</h3>
+					-->
+					<h3 class="f_l" style="padding-top:15px;">{$link_group.name}：</h3>
+					<ul {if $link_group.name eq '合作伙伴'}class="td"{/if}>
+					{foreach from=$link_group.links item=link}
+						<li style="height:60px;"><a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}">{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a></li>
+					{/foreach}
+					</ul>
+					</div>	
+					<div class="blank1"></div>	
+					{/if}
+				{/foreach}
+				{/if}
+				<div class="blank10"></div>
+				<div class="footer_line3"></div>
+		</div>
+		{/if}
+		{if $MODULE_NAME <> 'user' && $MODULE_NAME <> 'manageagency' && $MODULE_NAME <> 'authorized' && $MODULE_NAME <> 'agency_money'}
+        		
+    	<div class="wrap ">
+    		<div class="blank20"></div>
+			<div style="padding-bottom:20px;">
+	            <ul class="cf f_l f_box">
+	            	{foreach from=$deal_help item=help_cate name="help_cate"}
+					{if $smarty.foreach.help_cate.iteration <= app_conf('HELP_CATE_LIMIT')}
+					<li class="col hp{$smarty.foreach.help_cate.iteration}{if $smarty.foreach.help_cate.last} end{/if}">
+	                    <h3 class="f_l">{$help_cate.title}</h3>
+						<div class="blank0"></div>
+	                    <ul class="sub-list">
+							{foreach from=$help_cate.help_list item=help_item name="help_item"}
+							{if $smarty.foreach.help_item.iteration <= app_conf('HELP_ITEM_LIMIT')}
+							<li><a href="{$help_item.url}" {if $help_item.new eq 1}target="_blank"{/if}>{$help_item.title}</a></li>
+							{/if}
+							{/foreach}  
+							<li class="blank0"></li>           
+						</ul>
+						<div class="blank0"></div>
+	                </li> 
+					{/if}
+					{/foreach}
+					
+				
+					<li class="blank0"></li>  
+	            </ul>
+				<div class="f_r customer">
+					
+					<div class="telphone f_r">
+						<div class="f_r">
+							<span class="telep b">{function name="app_conf" v="SHOP_TEL"}</span>
+							<span class="time f12">{function name="app_conf" v="ONLINE_TIME"}</span>
+						</div>
+						<i class="iconfont f_r mt1" style="font-size:75px;line-height:50px;">&#xe61f;</i>
+					</div>
+					<div class="blank30"></div>
+					<div class="copy_right tr">
+							{function name="app_conf" value="SHOP_FOOTER"} 
+					<div class="blank1"></div>
+					{function name="app_conf" value="ICP_LICENSE"}&nbsp;&nbsp;
+					{function name="app_conf" value="COUNT_CODE"}
+					</div>
+				</div>
+
+				<div class="blank25"></div>
+
+				<div class="blank0"></div>
+			</div>
+			
+		</div>
+		{/if}
+				
+		</div>	
+	</div>
+	{if $online_qq}
+	{include file="inc/kefu.html"}
+	{/if}
+	<div id="gotop"></div>
+	{if $MODULE_NAME neq 'guide'}
+<script type="text/javascript" defer="defer">
+	resetWindowBox();
+</script>
+{/if}
+</div>
+
+</body>
+</html>
+					<!-- 	<div class="long f_r" >
+						{include file="inc/inc_article_info.html"}
+					</div>   
+					<div class="blank"></div>   -->
+<!-- <div id="xj_foot" style="position: fixed;top: 0;">	</div>
+										 -->										

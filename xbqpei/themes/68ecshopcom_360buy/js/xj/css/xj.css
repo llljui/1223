@@ -1,0 +1,19 @@
+/* .xj_preornext:hover{background-color:#444;opacity: 0.8;} */
+/* .list.hover .cat{width: 215px!important;height: 60px!important;}  */
+.proclamation,.order_type{display: none;}
+.right-sidebar{display: none;}
+.headright{position: absolute;left:1000px;top: -38px;z-index: 10;}
+.catright{right:10px!important;}
+.xj-center{left: -200px;}
+.xj_a{position: absolute;left: 0px;top: 0px;}
+.motohover{width:200px;height:150px;position:absolute;cursor: pointer;}
+.motohover:hover{}
+.moto1{left:500px;top:215px;}
+.moto2{left:65px;top:290px;}
+.moto3{left:460px;top:480px;}
+.moto4{left:720px;top:450px;}
+.moto5{left:200px;top:470px;}
+.moto6{left:910px;top:210px;}
+.moto7{left:570px;top:10px;}
+.moto8{left:830px;top:50px;}
+.moto9{left:310px;top:45px;}

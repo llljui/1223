@@ -1,0 +1,14 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--若有数据就显示-->
+<div style="width:208px;height:100px;position:absolute;right:0px;top:20px;display:none;" > 
+   <img src="https://misc.360buyimg.com/mtd/pc/common/img/no_login.jpg" width="20%" height="40%" style="border-radius:20px;margin-left:92px;" alt="无图片">
+	 <h5 style="text-align:center;">hi!,欢迎您回来</h5>
+	 
+</div>
+<!--若有无数据就不显示-->
+<div style="width:208px;height:100px;position:absolute;right:0px;top:20px;" > 
+	 <img src="https://misc.360buyimg.com/mtd/pc/common/img/no_login.jpg" width="20%" height="40%" style="border-radius:20px;margin-left:92px;" alt="无图片">
+	 <h5 style="text-align:center;">hi!,欢迎来到小滨</h5>
+	 <a href="user.php" style="margin-top:6px;margin-right:10px;background:#e31939; margin-left:25%;display:inline-block;width:55px;height:30px;text-align-last:center;font-size:15px;color:white;line-height: 200%; ">登录</a>
+	 <a href="register.php" style="background:white;width:55px;height:30px;text-align-last:center;font-size:15px;color:#e31939;line-height:200%;border:1px solid #e31939;display:inline-block; ">注册</a>
+</div>

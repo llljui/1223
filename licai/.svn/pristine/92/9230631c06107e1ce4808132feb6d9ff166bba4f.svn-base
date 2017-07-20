@@ -1,0 +1,37 @@
+<?php
+// +----------------------------------------------------------------------
+// | 邦邦理财
+// +----------------------------------------------------------------------
+// | Copyright (c) 2017 http://www.bangbanglicai.com All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 华少（273017814@qq.com）
+// +----------------------------------------------------------------------
+class shareModule
+{
+	public function index(){
+		
+        //1,是否实名注册
+        if(!$GLOBALS['user_info']){
+            $is_login = 0;
+        } else {
+            $is_login = 1;
+
+            $user_id = $GLOBALS['user_info']['id'];
+            $is_identify = $GLOBALS['db']->table('user_credit_file')->where('status = 1 AND passed = 1 AND type="credit_identificationscanning" AND user_id = ' . $user_id)->getField('id');
+
+            //生成专属分享码
+            if ($is_identify) {
+                //分享码生成 
+                $code = base64_encode($GLOBALS['user_info']['user_name']);
+            }
+        }
+
+        $GLOBALS['tmpl']->assign('code', $code);
+        $GLOBALS['tmpl']->assign('is_login', $is_login);
+        $GLOBALS['tmpl']->assign('is_identify', $is_identify);
+        $GLOBALS['tmpl']->display("share/activity.html");
+    }
+
+
+}
+?>

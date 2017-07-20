@@ -1,0 +1,20 @@
+*{margin:0;overflow-x: hidden;list-style: none;}
+body{perspective: 300px;}
+.page1{width:1360px;margin:0 auto;}
+.car_y{position: absolute;margin-top:-850px;margin-left: 100px;}
+.car_g{position: absolute;margin-top:315px;margin-left: 660px;}
+.act_time,.boat,.handle,.m_580{position: absolute;}
+.boat{margin-top:-750px;margin-left:700px;transform:scale(0.2, 0.2);opacity: 0;}
+.handle{margin-top:-1250px;margin-left:475px;opacity: 0;transform: translate3d(200px, 0, 200px)}
+.m_580{margin-top:-515px;margin-left:0px;}
+.act_time{margin-top:-450px;margin-left:750px;opacity: 0;}
+.page2{clear: both;margin: 0 auto; margin-top:-10px;width: 1360px;}
+.ecv{position: absolute;margin-top:100px;}
+.page3,.page4,.page5,.page6,.page7,.page8{margin:0 auto;width: 1360px;margin-top: -10px}
+.bao{position: absolute;margin-top: -130px;margin-left: 245px;cursor: pointer;}
+.bao1{transform: rotateY(180deg);}
+.bao2{margin-top: -70px;margin-left: 870px;}
+.bao3{transform: rotateY(180deg);margin-top: -160px;margin-left: 395px;}
+.bao4{margin-top: -265px;margin-left: 945px;}
+.bao5{transform: rotateY(180deg);margin-left: 200px;margin-top: -160px;}
+.bao6{margin-top: -443px;margin-left: 910px;}

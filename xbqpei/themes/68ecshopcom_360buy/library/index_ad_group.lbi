@@ -1,0 +1,44 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="bf-content" style="width:1210px;"> 
+      <section>
+        <div class="tabs tabs-style-bar">
+          <nav>
+            <ul>
+              <li><a href="#section-bar-1" class=""><h4>全车件</h4></a></li>
+              <li><a href="#section-bar-2" class=""><h4>车身</h4></a></li>
+              <li><a href="#section-bar-3" class=""><h4>发动机系统</h4></a></li>
+              <li><a href="#section-bar-4" class=""><h4>传动系统</h4></a></li>
+              <li><a href="#section-bar-5" class=""><h4>行驶系统</h4></a></li>
+              <li><a href="#section-bar-6" class=""><h4>冷却系统</h4></a></li>
+              <li><a href="#section-bar-7" class=""><h4>制动系统</h4></a></li>
+              <li><a href="#section-bar-8" class=""><h4>转向系统</h4></a></li>
+              <li><a href="#section-bar-9" class=""><h4>供油系统</h4></a></li>
+              <li><a href="#section-bar-10" class=""><h4>进排气系统</h4></a></li>
+            </ul>
+          </nav>
+          <div class="content-wrap">
+            <section id="section-bar-1">
+                <div class="motohover moto1"></div> 
+                <div class="motohover moto2"></div> 
+                <div class="motohover moto3"></div> 
+                <div class="motohover moto4"></div> 
+                <div class="motohover moto5"></div> 
+                <div class="motohover moto6"></div> 
+                <div class="motohover moto7"></div> 
+                <div class="motohover moto8"></div> 
+                <div class="motohover moto9"></div>
+                <img src="themes/68ecshopcom_360buy/js/xj/allmoto.jpg">
+            </section>
+            <section id="section-bar-2" class="nav-content"><ul></ul></section>
+            <section id="section-bar-3" class="nav-content"><ul></ul></section>
+            <section id="section-bar-4" class="nav-content"><ul></ul></section>
+            <section id="section-bar-5" class="nav-content"><ul></ul></section>
+            <section id="section-bar-6" class="nav-content"><ul></ul></section>
+            <section id="section-bar-7" class="nav-content"><ul></ul></section>
+            <section id="section-bar-8" class="nav-content"><ul></ul></section>
+            <section id="section-bar-9" class="nav-content"><ul></ul></section>
+            <section id="section-bar-10" class="nav-content"><ul></ul></section>
+          </div><!-- /content -->
+        </div><!-- /tabs -->
+      </section>
+</div>

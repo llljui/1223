@@ -1,0 +1,7 @@
+
+  <?php
+ $GLOBALS['smarty']->assign('articles', get_cat_articles($GLOBALS['smarty']->_var['articles_cat']['id']));
+     ?>
+			{foreach from=$articles item=article_item name=articles}
+			<li{if $smarty.foreach.articles.first} class="first"{/if}><span>推荐</span><a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title|escape:html}</a></li>
+			{/foreach}

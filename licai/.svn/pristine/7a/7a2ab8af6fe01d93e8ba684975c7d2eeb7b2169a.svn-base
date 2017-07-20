@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>小滨金融</title>
+	<link rel="stylesheet" href="css/index.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+	<div class="page1">
+		<img src="img/p1.png" width="100%" class="" alt="暂无图片">
+		<img src="img/car_y.png" width="200px"   class="car_y" alt="暂无图片">
+		<img src="img/boat.png"  width="230px"   class="boat" alt="暂无图片">
+		<img src="img/handle.png" width="470px"  class="handle" alt="暂无图片">
+		<img src="img/m_580.png"  width="360px"  class="m_580" alt="暂无图片">
+		<img src="img/act_time.png" width="245px" alt="暂无图片" class="act_time">
+	</div>
+	<div class="page2">
+		<img src="img/car_g.png" width="270px" class="car_g" alt="暂无图片">
+		<img src="img/ecv.png" width="5%" class="ecv" alt="暂无图片">
+		<img src="img/p2.gif" width="100%" alt="暂无图片" >
+		<img src="img/open.png" alt="暂无图片" width="180px" class="bao bao1" >
+		<div id="begin"></div>
+	</div>
+	<div class="page3">
+		<img src="img/p3.png" width="100%" alt="暂无图片">
+		<img src="img/open.png" alt="暂无图片" width="180px" class="bao bao2" >
+	</div>
+	<div class="page4">
+		<img src="img/p4.png" width="100%" alt="暂无图片">
+		<img src="img/open.png" alt="暂无图片" width="180px" class="bao bao3">
+	</div>
+	<div class="page5">
+		<img src="img/p5.png" width="100%" alt="暂无图片">
+		<img src="img/open.png" alt="暂无图片" width="180px" class="bao bao4" >
+	</div>
+	<div class="page6">
+		<img src="img/p6.png" width="100%" alt="暂无图片">
+		<img src="img/open.png" alt="暂无图片" width="180px" class="bao bao5">
+	</div>
+	<div class="page7">
+		<img src="img/p7.png" width="100%" alt="暂无图片">
+		<img src="img/open.png" alt="暂无图片" width="180px" class="bao bao6">
+	</div>
+	<div class="page8">
+		<img src="img/p8.png" width="100%" alt="暂无图片">
+	</div>
+</body> 
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

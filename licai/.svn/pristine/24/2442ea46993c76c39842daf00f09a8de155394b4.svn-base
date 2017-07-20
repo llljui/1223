@@ -1,0 +1,24 @@
+body{margin: 0;}
+.goback{position: fixed;top: 40%;cursor: pointer;opacity: 0.3;}
+.page{overflow-x:hidden;width: 100%;}
+.page_img{overflow-x:hidden;width:100%;}
+.p1{position:absolute;top:-11%;left: 31%;opacity: 0;transform:scale(0.0);}
+.money{position: absolute;top: 0;}
+/* .cpu{position:absolute;} */
+.cpu1{position: absolute;top: 205%;left: 50%;}
+.cpu2{position: absolute;top:212%;left: 49%;}
+.cpu3{position: absolute;top:223%;left: 49%;cursor: pointer;}
+.cpu3:hover{transform: scale(1.1, 1.1);transition: 0.5s;}
+.cpu_input1{position: absolute;top: 208%;left: 59.5%;z-index: 444;display: block;width:7.6%;height: 5.1%;background: #fe4d3f;border: none;}
+.cpu_input1:focus{outline:none}
+.cpu_input2{position: absolute;top:214.5%;left: 59.5%;z-index: 666;display: block;width:7.6%;height: 5.1%;background: #fe4d3f;border: none;}
+.cpu_input2:focus{outline:none}
+.explem{position: absolute;top: 203%;left:47%;}
+.myget{position: absolute;top: 231%;left:55%;}
+#share li{float: left;list-style: none;position: absolute;top: 291%;width: 10%;}
+#share li img{cursor: pointer;}
+#share li img:hover{transition: 0.5s;transform: scale(1.1,1.1);}
+.weixin{left:26%;}
+.qq{left: 37%;}
+.weibo{left: 48.5%;}
+.copy{left:60%;top: 292%!important;}

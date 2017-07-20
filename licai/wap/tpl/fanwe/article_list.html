@@ -1,0 +1,79 @@
+{if $smarty.request.is_ajax neq 1}
+{include file="./inc/header.html"}	
+<div class="page" id='{$data.act}'>
+<?php
+	$this->_var['back_url'] = wap_url("index","init#index");
+	$this->_var['back_page'] = "#init";
+	$this->_var['back_epage'] = $_REQUEST['epage']=="" ? "#init" : "#".$_REQUEST['epage'];
+?>
+{include file="./inc/title.html"}
+<div class="content infinite-scroll pull-to-refresh-content article_list_content"  data-distance="{$data.rs_count}"  all_page="{$data.page.page_total}" ajaxurl="{wap_url x="index" r="article_list#index"}">
+<!-- 这里是页面内容区 -->
+<!--文章列表-->
+<div class="content-inner">
+	<div class="list-block">
+	<div  style="margin-top:45px;">
+
+        {foreach from=$data.list item=list}
+	 <details style="background:white;border:none;" class="detail" >
+         <summary style="height:45px;font-size:17px;background-image: url('tpl/fanwe/images/public/1.png');background-size: 5.5%;background-repeat: no-repeat;background-position: 97.5% 50%;color: black;line-height: 280%;padding-left: 10px;margin-top: 1px;font-weight: 500;background-color:#e4f8ff;"><span style="display:inline-block;background-image:url('tpl/fanwe/images/public/biaoqian1.png');width:1.2rem;height: 1.2rem;margin-right: 10px;background-position:0 0%;margin-bottom: -3px;" class="spanimg"></span>{$list.title}
+		</summary>
+		<ul style="margin:0px 0 0 20px;">
+            {foreach from=$list.list item=item}
+            <li onclick="RouterURL('{wap_url a="index" r="show_article" p="id=$item.id"}','#show_article',2);" style="font-size: 1rem;"><p style="font-size:0.7rem;border-top:1px solid #ddd;color:#275fcc;">{$item.title}</p></li>
+            {/foreach}
+		</ul>
+	</details>
+    {/foreach}
+	</div>
+	<script type="text/javascript">
+		for (var i = 0; i < jQuery(".detail").length;i++) {
+			(function (i) {
+				jQuery(".detail:eq("+i+")").click(function() {
+					if (jQuery(".detail:eq("+i+")").attr("open")) {
+						jQuery(".detail:eq("+i+")").children('summary').css("background-image","url(tpl/fanwe/images/public/1.png)");
+						jQuery(".detail:eq("+i+")").children('summary').css({"background-color":"#e4f8ff","color":"black"});
+						jQuery(".detail:eq("+i+")").children('summary').children("span").css("background-image","url(tpl/fanwe/images/public/biaoqian1.png)");
+					}
+					else{
+						jQuery(".detail:eq("+i+")").children('summary').css("background-image","url(tpl/fanwe/images/public/-"+1+".png)");
+						jQuery(".detail:eq("+i+")").children('summary').children("span").css("background-image","url(tpl/fanwe/images/public/biaoqian2.png)");
+						jQuery(".detail:eq("+i+")").children('summary').css({"background-color":"#4366e4","color":"white"});
+					}
+					
+				});
+				
+			})(i)
+			
+		}
+
+	</script>
+
+
+
+	  <!--  <ul>
+	  {/if}
+	  默认的下拉刷新层
+	      <div class="pull-to-refresh-layer" all_page="{$data.page.page_total}" >
+	          <div class="preloader"></div>
+	          <div class="pull-to-refresh-arrow"></div>
+	      </div>
+	  			{foreach from=$data.list item="item"}
+	  			<li>
+	           <a href="#" onclick="RouterURL('{wap_url a="index" r="show_article" p="id=$item.id"}','#show_article',2);" class="item-link item-content">
+	             <div class="item-inner w_b">
+	               <div class="item-title w_b_f_1">{$item.title}</div>
+	             </div>
+	           </a>
+	        </li>
+	  			{/foreach}			 
+	  {if $smarty.request.is_ajax neq 1}
+	  		</ul> -->
+	</div>
+</div>
+{include file="./inc/footer.html"}
+{/if}
+
+
+
+

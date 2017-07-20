@@ -1,0 +1,103 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <?php
+	  $GLOBALS['smarty']->assign('categories',       get_categories_tree(0)); // 分类树
+	  ?>
+	   <div style ="padding-left:18px; border: 1px solid #ccc;border-bottom:none;background-color:#dddddd;color:#e31939;font-size:16px; height:40px; line-height:245%; font-weight:bold;">品牌导航</div>
+    <div id="sortlist" class="content_2" style="height:248px;border-right:none;">
+   
+      <div id="cate1" >
+	<!--{foreach from=$categories item=cat name=cat}-->
+        <div class='item  <!-- {if $cat.id eq $category} -->current{/if}'>
+       <h3  onclick="tab1({$smarty.foreach.cat.index})"><b></b>{$cat.name|escape:html}</h3>
+          <ul style=" <!-- {if $cat.id eq $category} -->display:block;{else}display:none;{/if}">
+           <!--{foreach from=$cat.cat_id item=child}-->
+            <li><a href="{$child.url}">{$child.name|escape:html}</a></li>
+            <!--{/foreach}-->
+           
+          </ul>
+        </div>
+        
+        <!--{/foreach}--> 
+   
+      </div>
+    </div>
+    <!--sortlist end-->
+<script type="text/javascript">
+obj_h41 = document.getElementById("cate1").getElementsByTagName("h3")
+obj_ul1 = document.getElementById("cate1").getElementsByTagName("ul")
+obj_img1 = document.getElementById("cate1").getElementsByTagName("div")
+function tab1(id)
+{       if($("#cate1 div:first-child").css('display')!=='block'){
+		console('666');
+		$("#cate1 div:first-child").removeClass('current');
+        $("#cate1 div ul:first-child").css('display','none');
+        if($('#cate div.current').length>1){    
+            $("#cate div:first-child").removeClass('current');
+            $("#cate div:first-child ul").css('display','none');}  
+
+}
+	    
+		if(obj_ul1.item(id).style.display == "block")
+		{
+			obj_ul1.item(id).style.display = "none";
+			obj_img1.item(id).className = "item";
+			return false;
+		}
+		else(obj_ul1.item(id).style.display == "none")
+		{	$("#cate1 div").removeClass("current");
+      	    $("#cate1 div ul").css("display","none");
+			obj_ul1.item(id).style.display = "block";
+			obj_img1.item(id).className = "item current";
+		}
+}
+</script>
+
+<div class="blank"></div>
+
+
+ <?php
+	  $GLOBALS['smarty']->assign('categories',       get_car_system_categories_tree(0)); // 分类树
+	  ?>
+	  <div style ="font-weight:bold; line-height:245%;padding-left:18px; height:40px; border: 1px solid #ccc;border-bottom:none;background-color:#dddddd;color:#e31939;font-size:16px;">配件导航</div>
+    <div id="sortlist" class="content_2" style="height:248px;border-right:none;">
+   
+      <div id="cate2" >
+
+	<!--{foreach from=$categories item=cat name=cat}-->
+        <div class='item  <!-- {if $cat.id eq $category} -->current{/if}'>
+       <h3  onclick="tab2({$smarty.foreach.cat.index})"><b></b>{$cat.name|escape:html}</h3>
+          <ul style=" <!-- {if $cat.id eq $category} -->display:block;{else}display:none;{/if}">
+           <!--{foreach from=$cat.cat_id item=child}-->
+            <li><a href="{$child.url}">{$child.name|escape:html}</a></li>
+            <!--{/foreach}-->
+           
+          </ul>
+        </div>
+        
+        <!--{/foreach}--> 
+   
+      </div>
+    </div>
+    <!--sortlist end-->
+<script type="text/javascript">
+obj_h4 = document.getElementById("cate2").getElementsByTagName("h3")
+obj_ul = document.getElementById("cate2").getElementsByTagName("ul")
+obj_img = document.getElementById("cate2").getElementsByTagName("div")
+function tab2(id)
+{ 		 $("#cate2 div:first-child").removeClass('current');
+        $("#cate2 div ul:first-child").css('display','none');
+		if(obj_ul.item(id).style.display == "block")
+		{
+			obj_ul.item(id).style.display = "none";
+			obj_img.item(id).className = "item";
+			return false;
+		}
+		else(obj_ul.item(id).style.display == "none")
+		{
+			$("#cate2 div").removeClass("current");
+     	    $("#cate2 div ul").css("display","none");
+			obj_ul.item(id).style.display = "block";
+			obj_img.item(id).className = "item current";
+		}
+}
+</script>

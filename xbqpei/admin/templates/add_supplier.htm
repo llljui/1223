@@ -1,0 +1,176 @@
+<!-- $Id: agency_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="validator.js,../js/transport.org.js,../js/region.js"}
+<div class="main-div" style="padding:10px;background:#fff;">
+<style type="text/css">
+.store-joinin th{padding:10px;text-align:left;text-indent:10px;font-weight:bold;background:#F7F7F7;color:#1F84B0;margin-bottom:15px;}
+.store-joinin td{padding:5px 1em}
+</style>
+    <form method="post" action="supplier.php" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+  <!--如果公司类型不为空，显示公司申请的信息，如果为空显示个人申请的信息-->
+  <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+    <thead>
+      <tr>
+        <th colspan="2">入驻商个人信息</th>
+      </tr>
+    </thead>
+    <tbody>
+		<tr>
+			<td class="label">选择用户：</td>
+			<td>
+				<select name="user_id">
+				<option value="0">请选择</option>
+                {foreach from=$user_list item=user}
+                <option value="{$user.user_id}">{$user.user_name}</option>
+                {/foreach}
+				</select>
+			</td>
+		</tr>
+    </tbody>
+  </table>
+    
+	
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+    <thead>
+      <tr>
+        <th colspan="2">开户银行信息</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">银行开户名：</td>
+        <td><input type="text" name="bank_account_name" value="{$supplier.bank_account_name|escape}" style="float:left;" size="30" /></td>
+      </tr><tr>
+        <td class="label">个人银行账号：</td>
+        <td><input type="text" name="bank_account_number" value="{$supplier.bank_account_number|escape}" style="float:left;" size="30" /></td></tr>
+      <tr>
+        <td class="label">开户银行支行名称：</td>
+        <td><input type="text" name="bank_name" value="{$supplier.bank_name|escape}" style="float:left;" size="30" /></td>
+      </tr>
+      <tr>
+        <td class="label">支行联行号：</td>
+        <td><input type="text" name="bank_code" value="{$supplier.bank_code|escape}" style="float:left;" size="30" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+    
+    <table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+      <thead>
+        <tr>
+          <th colspan="2">店铺经营信息</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">供货商名称：</td>
+          <td><input type="text" name="supplier_name" value="{$supplier.supplier_name|escape}" style="float:left;" size="30" /></td>
+        </tr>
+        <tr>
+          <td class="label">店铺等级：</td>
+          <td><input type="text" name="rank_name" value="{$supplier.rank_name|escape}" style="float:left;" size="30" />
+		  </td>
+        </tr>
+       <tr>
+          <td class="label">店铺分类：</td>
+          <td><input type="text" name="type_name" value="{$supplier.type_name|escape}" style="float:left;" size="30" /></td>
+        </tr>
+		<tr>
+			<td class="label">结算类型：</td>
+			<td>
+				<select name="supplier_rebate_paytime" size=1>
+				<option value="0">请选择</option>
+				<option value="1" {if $supplier.supplier_rebate_paytime eq '1'}selected{/if}>周</option>
+				<option value="2" {if $supplier.supplier_rebate_paytime eq '2'}selected{/if}>月</option>
+				<option value="3" {if $supplier.supplier_rebate_paytime eq '3'}selected{/if}>季度</option>
+				<option value="4" {if $supplier.supplier_rebate_paytime eq '4'}selected{/if}>年</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="label">平台使用费：</td>
+			<td><input type="text" name="system_fee" value="{if $supplier.system_fee>0.00}{$supplier.system_fee}{/if}"></td>
+		</tr>
+		<tr>
+		<td class="label">商家保证金：</td>
+		<td><input type="text" name="supplier_bond" value="{if $supplier.supplier_bond}{$supplier.supplier_bond}{/if}"></td>
+		</tr>
+		<tr>
+		<td class="label">分成百分比：</td>
+		<td><input type="text" name="supplier_rebate" value="{if $supplier.supplier_rebate}{$supplier.supplier_rebate}{/if}">%</td>
+		</tr>
+		<tr>
+		<!--<td class="label">审核意见：</td><td><textarea name="supplier_remark" rows=4 cols=50>{$supplier.supplier_remark}</textarea></td>
+		</tr>
+		<tr>
+		<td class="label">审核状态：</td><td>
+		<select name="status" size=1><option value="0" {if $supplier.status eq '0'}selected{/if}>未审核</option><option value="1" {if $supplier.status eq '1'}selected{/if}>审核通过</option><option value="-1" {if $supplier.status eq '-1'}selected{/if}>审核不通过</option></select><span style="color:red"><br>1,店铺由<b>"审核通过"</b>变为<b>"审核不通过"</b>等同于关闭店铺，店铺相关商品下架，店铺街不再显示此店铺；<br>2,由<b>"审核不通过"</b>再次变为<b>"审核通过"</b>,相关商品需要手动上架，店铺街展示需要再次申请；<br>3,确定后，入驻商后台登陆密码将与前台登陆密码同步；</span></td>
+		</tr>
+        -->
+      </tbody>
+    </table>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="store-joinin">
+	  <tr>
+		<td align="center">
+		  <input type="submit" class="button" value="{$lang.button_submit}" />
+		  <input type="reset" class="button" value="{$lang.button_reset}" />
+		  <input type="hidden" name="act" value="{$form_action}" />
+		  <input type="hidden" name="status" value="1" />
+		  <input type="hidden" name="status_url" value="{$supplier.status}">
+		  <input type="hidden" name="id" value="{$supplier.supplier_id}" />
+          <input type="hidden" id="person" value="1">
+		</td>
+	  </tr>
+	</table>
+
+  </form>
+
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="JavaScript">
+<!--
+
+onload = function()
+{
+    // 开始检查订单
+    startCheckOrder();
+}
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+	var theForm=document.forms['theForm'];
+    validator = new Validator("theForm");
+	if (theForm.elements['status'].value == '1')
+	{
+		//if(document.getElementById('company')){
+		//	validator.required("settlement_bank_account_name",  "填写了银行开户名才能审核通过！");
+		//	validator.required("settlement_bank_account_number",  "填写了公司银行账号才能审核通过！");
+		//	validator.required("settlement_bank_name",  "填写了开户银行支行名称才能审核通过！");
+		//	validator.required("settlement_bank_code",  "填写了支行联行号才能审核通过！");
+		//	
+		//	validator.required("system_fee",  "填写了平台使用费才能审核通过！");
+		//	validator.required("supplier_bond",  "填写了商家保证金才能审核通过！");
+		//	validator.required("supplier_rebate",  "填写了分成百分比才能审核通过！");
+		//}
+		//if(document.getElementById('person')){
+		//	validator.required("bank_account_name",  "填写了银行开户名才能审核通过！");
+		//	validator.required("bank_account_number",  "填写了个人银行账号才能审核通过！");
+		//	validator.required("bank_name",  "填写了开户银行支行名称才能审核通过！");
+		//	validator.required("bank_code",  "填写了支行联行号才能审核通过！");
+		//	
+		//	validator.required("system_fee",  "填写了平台使用费才能审核通过！");
+		//	validator.required("supplier_bond",  "填写了商家保证金才能审核通过！");
+		//	validator.required("supplier_rebate",  "填写了分成百分比才能审核通过！");
+		//}	
+	}
+    
+    return validator.passed();
+}
+//-->
+</script>
+{/literal}
+{include file="pagefooter.htm"}

@@ -1,0 +1,12 @@
+//搭建时可能会出现无法访问
+cd public/
+mkdir logger
+chmod -R a+w logger
+mkdir runtime
+chmod -R a+w runtime
+mkdir session
+chmod -R a+w session
+
+chmod -R a+w images
+
+
